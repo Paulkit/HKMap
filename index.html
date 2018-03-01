@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+ var infowindow;
+var map;
+var myLatLng = [];
+
+ function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 22.319481, lng: 114.166386},
+          zoom: 10,
+           minZoom: 2,
+             mapTypeId: google.maps.MapTypeId.ROADMAP,
+              disableDefaultUI: true 
+              /* ,
+               styles: [
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill"  ,
+       "stylers": [
+            {
+                "saturation": 36
+            
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000" 
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000",
+                 "visibility": "off"
+            },
+            {
+                "lightness": 0
+            },
+            {
+                "weight": 1.2
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000",
+                 "visibility": "off"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000",
+                 "visibility": "off"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000",
+                 "visibility": "off"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 0
+            },
+            {
+                "weight": 0
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 0
+            }
+        ]
+    }
+]*/
+        });   
+ 
+ var ctaLayer = new google.maps.KmlLayer({
+                   //    url: 'https://raw.githubusercontent.com/Paulkit/HKMap/master/HKG_adm0.kml' 
+                       url: 'https://raw.githubusercontent.com/Paulkit/HKMap/master/HKG_adm1.kml' ,
+                       map: map
+  });
+   //ctaLayer.setMap(map);
+
+    var ctaLayer = new google.maps.KmlLayer({
+                   //    url: 'https://raw.githubusercontent.com/Paulkit/HKMap/master/HKG_adm0.kml' 
+                       url: 'https://raw.githubusercontent.com/Paulkit/HKMap/master/HKG_adm0.kml' ,
+                       map: map
+  });
+
+      
+      }
+
+ 
+   
+
+ 
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC42FWVuFclawG_ujrXok44nC7UaY-vGDs&callback=initMap"
+    async defer></script>
+  </body>
+</html>
+
+
