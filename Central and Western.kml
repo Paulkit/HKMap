@@ -6,14 +6,16 @@
 
 <Style id="1">
 <LineStyle>
-<width>1.5</width>
-<color>ff000000</color>
+<width>0.5</width>
+<color>ffffff00</color>
 </LineStyle>
 <PolyStyle>
-<color>aa0000df</color>
+<color> ff15FFdf</color>
 <fill>1</fill>
 </PolyStyle>
 </Style>
+<!-- Source download from http://www.gadm.org/country -->
+<!-- Edited by PaulCK 2/3/2018 -->
 <Placemark>
 <name>Central and Western</name>
 <description><![CDATA[District]]></description>
