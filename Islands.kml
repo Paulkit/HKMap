@@ -5,11 +5,11 @@
 <description><![CDATA[<a href='http://www.gadm.org'>GADM</a> boundaries.]]></description>
 <Style id="3">
 <LineStyle>
-<width>1.5</width>
+<width>0.5</width>
 <color>ff000000</color>
 </LineStyle>
 <PolyStyle>
-<color>aa0000df</color>
+<color>800000df</color>
 <fill>1</fill>
 </PolyStyle>
 </Style>

@@ -6,11 +6,11 @@
 
 <Style id="16">
 <LineStyle>
-<width>1.5</width>
+<width>0.5</width>
 <color>ffdcb97f</color>
 </LineStyle>
 <PolyStyle>
-<color>aadcb97f</color>
+<color>80dcb97f</color>
 <fill>1</fill>
 </PolyStyle>
 </Style>

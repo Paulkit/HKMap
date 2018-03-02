@@ -8,11 +8,11 @@
 
 <Style id="17">
 <LineStyle>
-<width>1.5</width>
+<width>0.5</width>
 <color>ffa78268</color>
 </LineStyle>
 <PolyStyle>
-<color>aaa78268</color>
+<color>80a78268</color>
 <fill>1</fill>
 </PolyStyle>
 </Style>
