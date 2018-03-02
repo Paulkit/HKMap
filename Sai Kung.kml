@@ -7,10 +7,10 @@
 <Style id="8">
 <LineStyle>
 <width>1.5</width>
-<color>ff000000</color>
+<color>ffcca153</color>
 </LineStyle>
 <PolyStyle>
-<color>aa0000df</color>
+<color>aacca153</color>
 <fill>1</fill>
 </PolyStyle>
 </Style>
@@ -5229,5 +5229,6 @@
 </Polygon>
 </MultiGeometry>
 </Placemark>
+
 </Document>
 </kml>
