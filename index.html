@@ -5,58 +5,26 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
  
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
+ 
+ 
+ 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+ 
     <script>
- var infowindow;
-var map;
-var myLatLng = [];
- var district = [
+      var map;
   
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Central%20and%20Western.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Eastern.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Islands.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Kowloon%20City.kml",
- "https://raw.githubusercontent.com/Paulkit/HKMap/master/Kwai%20Tsing.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Kwun%20Tong.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/North.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Sai%20Kung.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Sha%20Tin.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Sham%20Shui%20Po.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Southern.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Tai%20Po.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Tsuen%20Wan.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Tuen%20Mun.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Wan%20Chai.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Wong%20Tai%20Sin.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Yau%20Tsim%20Mong.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Yuen%20Long.kml"
-   
-
- ];
- function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 22.319481, lng: 114.166386},
-          zoom: 10,
-           minZoom: 2,
-             mapTypeId: google.maps.MapTypeId.ROADMAP,
-              disableDefaultUI: true 
-              /* ,
+    function initMap() {
+      
+      map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 22.319481, lng: 114.166386},
+            zoom: 10,
+            zoomControl: false,
+    mapTypeControl: false,
+    scaleControl: false,
+    streetViewControl: false,
+    rotateControl: false,
+    fullscreenControl: false,
+             minZoom: 2/*,  
                styles: [
     {
         "featureType": "all",
@@ -228,40 +196,235 @@ var myLatLng = [];
             }
         ]
     }
-]*/
-        });   
- /*
- var ctaLayer = new google.maps.KmlLayer({
-                   //    url: 'https://raw.githubusercontent.com/Paulkit/HKMap/master/HKG_adm0.kml' 
-                       url: 'https://raw.githubusercontent.com/Paulkit/HKMap/master/HKG_adm1.kml' ,
-                       map: map
-  });
-  'https://raw.githubusercontent.com/Paulkit/HKMap/master/Sha%20Tin.kml',
+]  */
 
- */
- var array3 = new Array;
-
- for (i = 0; i < district.length; i++) {
-    var kml =    new google.maps.KmlLayer({
-                   //    url: 'https://raw.githubusercontent.com/Paulkit/HKMap/master/HKG_adm0.kml'  Kwun%20Tong
-                       url: district[i],
-                       map: map
-  });
- /* array3.push(
-  kml
-  
-   );*/
-    
-}
- 
-      }
+, styles:
+[
+    {
+        "featureType": "all",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.country",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.locality",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.neighborhood",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit.station",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    }
+]
+      });   
+      
+  $.getScript("/HKMap/js/basemap.js" ,function(){
+             // $(document).ready(ready);
+     
+      }); 
+  }
  
    
+  </script>
+  
 
+    <style>
+
+#map { 
+  height: 100%; 
+  width: 100%; 
+ position: absolute;
+  top: 0; 
+  left: 0; 
+  z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
+}
+    </style>
+  </head>
+  <body>
+    <button id="shareBtn" >sg</button>
+  <div id="map" style="height: 100%;width: 100%;"></div>
  
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC42FWVuFclawG_ujrXok44nC7UaY-vGDs&callback=initMap"
-    async defer></script>
+ 
+ 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC42FWVuFclawG_ujrXok44nC7UaY-vGDs&callback=initMap"
+async defer></script>
   </body>
 </html>
 
