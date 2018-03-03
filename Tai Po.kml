@@ -3450,14 +3450,5 @@
 </MultiGeometry>
 </Placemark>
 
-
-<Style id="12">
-<LineStyle>
-<width>1.5</width>
-<color>ff000000</color>
-</LineStyle>
-<PolyStyle>
-<color>aa0000df</color>
-<fill>1</fill>
-</PolyStyle>
-</Style>
+ </Document>
+</kml>
