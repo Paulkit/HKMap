@@ -5,7 +5,7 @@
 <description><![CDATA[<a href='http://www.gadm.org'>GADM</a> boundaries.]]></description>
 <Style id="4">
 <LineStyle>
-<width>0.5</width>
+<width>0</width>
 <color>ffc99c7b</color>
 </LineStyle>
 <PolyStyle>
