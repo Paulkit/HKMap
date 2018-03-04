@@ -2,7 +2,7 @@
   
 var district = [
      
-  
+  /*
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Central%20and%20Western.kml",
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Eastern.kml",
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Islands.kml",
@@ -20,7 +20,8 @@ var district = [
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Wan%20Chai.kml",
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Wong%20Tai%20Sin.kml",
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Yau%20Tsim%20Mong.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Yuen%20Long.kml"
+  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Yuen%20Long.kml"*/
+  "https://raw.githubusercontent.com/Paulkit/HKMap/master/18%district.kml"
    
 
  ];
@@ -38,5 +39,11 @@ for (i = 0; i < district.length; i++) {
     });
 
     array.push( kml);
+    // 18 district KmlLayer's click listener
+    google.maps.event.addListener(kml, 'click', function(kmlEvent) {
+        var text = kmlEvent.featureData.name;
+        alert(text);
+    });
     
+ 
 }
