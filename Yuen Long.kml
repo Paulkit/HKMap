@@ -7,10 +7,10 @@
 <Style id="18">
 <LineStyle>
 <width>0</width>
-<color>ffbbd6e1</color>
+<color>ff000080</color>
 </LineStyle>
 <PolyStyle>
-<color>80bbd6e1</color>
+<color>80000080</color>
 <fill>1</fill>
 </PolyStyle>
 </Style>
