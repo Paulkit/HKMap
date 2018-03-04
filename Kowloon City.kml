@@ -13,11 +13,11 @@
 <fill>1</fill>
 </PolyStyle>
 </Style>
-<!-- Source download from http://www.gadm.org/country -->
+ 
 <!-- Edited by PaulCK 2/3/2018 -->
 <Placemark>
-<name>Kowloon City</name>
-<description><![CDATA[District]]></description>
+<!--<name>Kowloon City</name>
+<description><![CDATA[District]]></description> -->
 <styleUrl>#4</styleUrl>
 <visibility>1</visibility>
 <MultiGeometry>

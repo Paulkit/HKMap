@@ -282,17 +282,17 @@ function initMap() {
      
 
   jQuery.when(
-      jQuery.get('/HKMap/js/basemap.js') ,
-      jQuery.get('/HKMap/js/18district.js') 
+      jQuery.get('/HKMap/js/basemap.js')  ,
+      jQuery.get('/HKMap/js/18district.js')  
   ).done(function () {
     //  alert("a");
      map.setCenter(baseCenterPoint);
      if (typeof google === 'object' && typeof google.maps === 'object') { // check Google Map is loaded
         // alert("a");
         map.data.setStyle({
-            fillColor: 'yellow',
-            strokeColor: 'red',
-            strokeWeight: 0.1
+            fillColor: '#e0e2e5',
+            strokeColor: 'ffffff',
+            strokeWeight: 0
         });
         map.data.loadGeoJson("https://raw.githubusercontent.com/Paulkit/HKMap/master/cn.json");
   

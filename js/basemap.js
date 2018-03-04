@@ -15,7 +15,7 @@
  google.maps.event.addListener(map, 'center_changed', function() {
     
  
-    if(!arePointsNear(map.getCenter(), baseCenterPoint,40)){
+    if(!arePointsNear(map.getCenter(), baseCenterPoint,35)){
      
        map.panTo(baseCenterPoint);
    //  animateMapZoomTo(10);
