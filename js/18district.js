@@ -1,28 +1,43 @@
- 
+var district_fillColor = [
+"#e6194b",
+"#3cb44b",
+"#ffe119",
+"#0082c8",
+"#f58231",
+"#911eb4",
+"#911eb4",
+"#46f0f0",
+"#d2f53c",
+"#d2f53c",
+"#fabebe",
+"#008080",
+"#aa6e28",
+"#fffac8",
+"#800000",
+"#ffd8b1",
+"#000080" 
+];
   
 var district = [
-     
- /*
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Central%20and%20Western.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Eastern.kml" ,
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Islands.kml" ,*/
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Kowloon%20City.kml"/*,
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Kwai%20Tsing.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Kwun%20Tong.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/North.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Sai%20Kung.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Sha%20Tin.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Sham%20Shui%20Po.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Southern.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Tai%20Po.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Tsuen%20Wan.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Tuen%20Mun.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Wan%20Chai.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Wong%20Tai%20Sin.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Yau%20Tsim%20Mong.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Yuen%20Long.kml" */
-  //"https://raw.githubusercontent.com/Paulkit/HKMap/master/HKG_adm1.kml"
-   
+  
+  "../HKMap/json/Central%20and%20Western.json" ,
+  "../HKMap/json/Eastern.json" ,
+  "../HKMap/json/Islands.json" ,
+  "../HKMap/json/Kowloon%20City.json" ,
+  "../HKMap/json/Kwai%20Tsing.json",
+  "../HKMap/json/Kwun%20Tong.json",
+  "../HKMap/json/North.json",
+  "../HKMap/json/Sai%20Kung.json",
+  "../HKMap/json/Sha%20Tin.json",
+  "../HKMap/json/Sham%20Shui%20Po.json",
+  "../HKMap/json/Southern.json",
+  "../HKMap/json/Tai%20Po.json",
+  "../HKMap/json/Tsuen%20Wan.json",
+  "../HKMap/json/Tuen%20Mun.json",
+  "../HKMap/json/Wan%20Chai.json",
+  "../HKMap/json/Wong%20Tai%20Sin.json",
+  "../HKMap/json/Yau%20Tsim%20Mong.json",
+  "../HKMap/json/Yuen%20Long.json" 
 
  ];
 
@@ -32,16 +47,23 @@ var district = [
 var array = new Array;
 
 for (i = 0; i < district.length; i++) {
-    var kml =    new google.maps.KmlLayer({
+  /*  var kml =    new google.maps.KmlLayer({
                 
                         url: district[i],
                         map: map
     });
+*/
+    map.data.setStyle({
+        fillColor: district_fillColor[i],
+        strokeWeight: 0
+    });
+    var geoJson  =   map.data.loadGeoJson(district[i]);
 
-    array.push( kml);
+
+  //  array.push( kml);
     // 18 district KmlLayer's click listener
-    google.maps.event.addListener(kml, 'click', function(kmlEvent) {
-        var text = kmlEvent.featureData.name;
+    google.maps.event.addListener(geoJson, 'click', function(kmlEvent) {
+        var text = geoJson.featureData.name;
         alert(text);
     });
     

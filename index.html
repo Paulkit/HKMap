@@ -27,7 +27,7 @@ body{
   <body>
  
   <div id="map" style="height: 100%;width: 100%;"></div>
-    <!--
+    
   <div  class=" show"  role="dialog" aria-hidden="true">
     <div class="modal-dialog">
 
@@ -43,7 +43,7 @@ body{
                      
                      
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">確定</button>
+                        <button id="confirm"type="button" class="btn btn-primary btn-lg btn-block">確定</button>
                          <span style="color:green;"> <?php echo $success; ?></span>
                          
                          <span style="color:red;"> <?php echo $fail; ?></span>
@@ -57,7 +57,7 @@ body{
 
 
     </div>
-</div>-->
+</div> 
  
 
  
@@ -302,7 +302,16 @@ function initMap() {
 
 
 
+$( "#confirm" ).click(function() {
+  /*  map.data.setStyle({
+            fillColor: '#606060',
+            strokeColor: 'ffffff',
+            strokeWeight: 0
+        });
+        map.data.loadGeoJson("../HKMap/json/Central%20and%20Western.json");
+  */
 
+});
 
 
 
