@@ -282,13 +282,15 @@ function initMap() {
      
 
   jQuery.when(
-      jQuery.get('/HKMap/js/basemap.js')/*,
-      jQuery.get('/HKMap/js/18district.js')*/
+      jQuery.get('/HKMap/js/basemap.js') ,
+      jQuery.get('/HKMap/js/18district.js') 
   ).done(function () {
     //  alert("a");
      map.setCenter(baseCenterPoint);
      if (typeof google === 'object' && typeof google.maps === 'object') { // check Google Map is loaded
         // alert("a");
+
+  
      }
 });
 }

@@ -9,7 +9,7 @@
  * 
  */
  // Listen for the dragend event
-   baseCenterPoint = new google.maps.LatLng(22.362536, 114.118785);
+   baseCenterPoint = new google.maps.LatLng(22.363358, 114.136615);
    
   
  google.maps.event.addListener(map, 'center_changed', function() {
