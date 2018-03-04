@@ -289,6 +289,11 @@ function initMap() {
      map.setCenter(baseCenterPoint);
      if (typeof google === 'object' && typeof google.maps === 'object') { // check Google Map is loaded
         // alert("a");
+        map.data.setStyle({
+            fillColor: 'yellow',
+            strokeColor: 'red',
+            strokeWeight: 0.1
+        });
         map.data.loadGeoJson("https://raw.githubusercontent.com/Paulkit/HKMap/master/cn.json");
   
      }
