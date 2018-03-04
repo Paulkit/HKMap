@@ -2,11 +2,11 @@
   
 var district = [
      
- 
+ /*
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Central%20and%20Western.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Eastern.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Islands.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Kowloon%20City.kml",
+  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Eastern.kml" ,
+  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Islands.kml" ,*/
+  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Kowloon%20City.kml"/*,
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Kwai%20Tsing.kml",
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Kwun%20Tong.kml",
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/North.kml",
@@ -20,7 +20,7 @@ var district = [
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Wan%20Chai.kml",
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Wong%20Tai%20Sin.kml",
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Yau%20Tsim%20Mong.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Yuen%20Long.kml" 
+  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Yuen%20Long.kml" */
   //"https://raw.githubusercontent.com/Paulkit/HKMap/master/HKG_adm1.kml"
    
 
