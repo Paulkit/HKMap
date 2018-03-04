@@ -1,7 +1,7 @@
  
   
 var district = [
-    "https://raw.githubusercontent.com/Paulkit/HKMap/master/cn.kml",
+     
   
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Central%20and%20Western.kml",
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Eastern.kml",
