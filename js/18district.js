@@ -2,7 +2,7 @@
   
 var district = [
      
-  /*
+ 
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Central%20and%20Western.kml",
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Eastern.kml",
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Islands.kml",
@@ -19,8 +19,9 @@ var district = [
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Tuen%20Mun.kml",
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Wan%20Chai.kml",
   "https://raw.githubusercontent.com/Paulkit/HKMap/master/Wong%20Tai%20Sin.kml",
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Yau%20Tsim%20Mon*/
-  "https://raw.githubusercontent.com/Paulkit/HKMap/master/HKG_adm0.kml"
+  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Yau%20Tsim%20Mong.kml",
+  "https://raw.githubusercontent.com/Paulkit/HKMap/master/Yuen%20Long.kml" 
+  //"https://raw.githubusercontent.com/Paulkit/HKMap/master/HKG_adm1.kml"
    
 
  ];
