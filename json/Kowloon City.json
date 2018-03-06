@@ -1,4 +1,5 @@
 {
+    "_comment": "Created by PaulCK on 6/3/2018.",
     "type": "FeatureCollection",
     "features": [
         {
@@ -1619,6 +1620,7 @@
                 ]
             },
             "properties": {
+                "name": "Kowloon City",
                 "styleUrl": "#4",
                 "styleHash": "-41e10053",
                 "stroke": "#c88200",

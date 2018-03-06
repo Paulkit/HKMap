@@ -22,44 +22,21 @@ body{
  left: 0; 
  z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
 }
+#over_map { position: absolute; top: 10px; left: 10px; z-index: 99; }
     </style>
   </head>
   <body>
  
   <div id="map" style="height: 100%;width: 100%;"></div>
     
-  <div  class=" show"  role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-
-        <div class="modal-content">
-       
-
-            <div class="modal-body">
-
-                <form class="form center-block" method="post">
-                    <div class="form-group">
-                        <input type="text" name="email" class="form-control input-lg" placeholder="電郵">
-                    </div>
-                     
-                     
-                    <div class="form-group">
-                        <button id="confirm"type="button" class="btn btn-primary btn-lg btn-block">確定</button>
-                         <span style="color:green;"> <?php echo $success; ?></span>
-                         
-                         <span style="color:red;"> <?php echo $fail; ?></span>
-                          
-                    </div>
-                   
-                    </form>
-            </div>
-      
-        </div>
-
-
-    </div>
-</div> 
  
+    <div id="over_map">
+        <p><button id="districts" class="btn btn-primary" href="#" role="button">18 districts »</button></p>
 
+       <p><button id="grayout" class="btn btn-primary" href="#" role="button">Gray out area outside HK »</button></p>
+         
+    </div>
+    
  
  
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -68,12 +45,12 @@ body{
     var map; // init in here
     var baseCenterPoint; // init in basemap.js
     var currentZoom = 12;
-
+    var district_layer; // init in 18district.js
 
 function initMap() {
     
     map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 22.319481, lng: 114.166386},
+      center: {lat: 22.363358, lng: 114.136615},
       zoom: 10,
       zoomControl: false,
       mapTypeControl: false,
@@ -277,7 +254,7 @@ function initMap() {
   }
 ]
     });   
-    map.setOptions({ minZoom: 10, maxZoom: 12 ,});
+     map.setOptions({ minZoom: 10, maxZoom: 12 ,});
    
      
 
@@ -285,35 +262,22 @@ function initMap() {
       jQuery.get('/HKMap/js/basemap.js')  ,
       jQuery.get('/HKMap/js/18district.js')  
   ).done(function () {
-    //  alert("a");
-     map.setCenter(baseCenterPoint);
-     if (typeof google === 'object' && typeof google.maps === 'object') { // check Google Map is loaded
-        // alert("a");
-        map.data.setStyle({
-            fillColor: '#606060',
-            strokeColor: 'ffffff',
-            strokeWeight: 0
-        });
-        map.data.loadGeoJson("https://raw.githubusercontent.com/Paulkit/HKMap/master/cn.json");
-  
-     }
+ 
 });
 }
 
 
+ 
 
-$( "#confirm" ).click(function() {
-  /*  map.data.setStyle({
-            fillColor: '#606060',
-            strokeColor: 'ffffff',
-            strokeWeight: 0
-        });
-        map.data.loadGeoJson("../HKMap/json/Central%20and%20Western.json");
-  */
-
+$( "#districts" ).on( "click", function() {
+    districts_setup(); 
 });
 
+$( "#grayout" ).on( "click", function() {
+     gray_out_setup();
+ 
 
+});
 
 
 </script>

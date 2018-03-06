@@ -1,7 +1,9 @@
 {
+    "_comment": "Created by PaulCK on 6/3/2018.",
     "type": "FeatureCollection",
     "features": [
         {
+             
             "type": "Feature",
             "geometry": {
                 "type": "Polygon",
@@ -1987,6 +1989,7 @@
                 ]
             },
             "properties": {
+              "SD_NAME": "Eastern" ,
                 "name": "Eastern",
                 "styleUrl": "#2",
                 "styleHash": "-3c4169b1",
