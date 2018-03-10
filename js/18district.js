@@ -1,7 +1,7 @@
  /**
  * Created by PaulCK on 6/3/2018.
  */
-var district_name = [
+let district_name = [
   "Central and Western",
   "Eastern",
   "Islands",
@@ -22,7 +22,7 @@ var district_name = [
   "Yuen Long" ,
   ];
 
-var district_fillColor = [
+let district_fillColor = [
 "#00ff00", // Central and Western
 "#3cb44b",
 "#ffff00",
@@ -44,7 +44,7 @@ var district_fillColor = [
 ];
 
   
-var district = [
+let district = [
   
   "../HKMap/json/Central%20and%20Western.json",
   "../HKMap/json/Eastern.json" ,
@@ -66,18 +66,21 @@ var district = [
   "../HKMap/json/Yuen%20Long.json"  
  ];
 
+ let districts = false;
+ let gray_out = false;
+
  // basic setup
  map.data.setStyle(function(feature) {
-    var name = feature.getProperty('name');
-    var color; 
-    var stroke;
-    var strokeWeight;
+    let name = feature.getProperty('name');
+    let color; 
+    let stroke;
+    let strokeWeight;
  
-    for (i = 0; i < district_name.length; i++) {
+    for (let i = 0; i < district_name.length; i++) {
       if (name === district_name[i]) {
         color = district_fillColor[i];
         stroke = '#000';
-        strokeWeight = 0.5;
+        strokeWeight = 0.1;
       }
        
     }
@@ -94,20 +97,19 @@ var district = [
      });
   }); 
  
- var districts = false;
- var gray_out = false;
+ 
 
 function districts_setup(){
 
   if(!districts){
-    for (i = 0; i < district.length; i++) {
+    for (let i = 0; i < district.length; i++) {
       district_layer = map.data.loadGeoJson(district[i]);
     } 
 
   }else{
 
     map.data.forEach(function(feature) {
-      var SD_NAME = feature.getProperty('SD_NAME');
+      let SD_NAME = feature.getProperty('SD_NAME');
       if (SD_NAME != "cn") {
           map.data.remove(feature);
       }
@@ -130,7 +132,7 @@ function gray_out_setup(){
 
     map.data.forEach(function(feature) {
 
-      var SD_NAME = feature.getProperty('SD_NAME');
+      let SD_NAME = feature.getProperty('SD_NAME');
       if (SD_NAME == "cn") {
         map.data.remove(feature);
       }
