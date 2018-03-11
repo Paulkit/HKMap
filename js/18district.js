@@ -46,24 +46,24 @@ let district_fillColor = [
   
 let district = [
   
-  "../HKMap/json/Central%20and%20Western.json",
-  "../HKMap/json/Eastern.json" ,
-  "../HKMap/json/Islands.json" ,
-  "../HKMap/json/Kowloon%20City.json" ,
-  "../HKMap/json/Kwai%20Tsing.json",
-  "../HKMap/json/Kwun%20Tong.json",
-  "../HKMap/json/North.json",
-  "../HKMap/json/Sai%20Kung.json",
-  "../HKMap/json/Sha%20Tin.json",
-  "../HKMap/json/Sham%20Shui%20Po.json",
-  "../HKMap/json/Southern.json",
-  "../HKMap/json/Tai%20Po.json",
-  "../HKMap/json/Tsuen%20Wan.json",
-  "../HKMap/json/Tuen%20Mun.json",
-  "../HKMap/json/Wan%20Chai.json",
-  "../HKMap/json/Wong%20Tai%20Sin.json",
-  "../HKMap/json/Yau%20Tsim%20Mong.json",
-  "../HKMap/json/Yuen%20Long.json"  
+  "json/Central%20and%20Western.json",
+  "json/Eastern.json" ,
+  "json/Islands.json" ,
+  "json/Kowloon%20City.json" ,
+  "json/Kwai%20Tsing.json",
+  "json/Kwun%20Tong.json",
+  "json/North.json",
+  "json/Sai%20Kung.json",
+  "json/Sha%20Tin.json",
+  "json/Sham%20Shui%20Po.json",
+  "json/Southern.json",
+  "json/Tai%20Po.json",
+  "json/Tsuen%20Wan.json",
+  "json/Tuen%20Mun.json",
+  "json/Wan%20Chai.json",
+  "json/Wong%20Tai%20Sin.json",
+  "json/Yau%20Tsim%20Mong.json",
+  "json/Yuen%20Long.json"  
  ];
 
  let districts = false;
