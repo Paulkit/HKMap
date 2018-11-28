@@ -1,6 +1,5 @@
 # HKMap
-HKMap
-Demo <a href="https://paulkit.github.io/HKMAP.html" target="_blank" >https://paulkit.github.io/HKMAP.html</a>
+
 <p></p>
 
 Highlight 18 districts in Hong Kong.
